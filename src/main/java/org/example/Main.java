@@ -35,7 +35,7 @@ public class Main {
 
             Collections.sort(threads, new Comparator<PngProcessor>() {
                 public int compare(PngProcessor thread1, PngProcessor thread2) {
-                    if (thread1.part > thread2.part) {
+                    if (thread1.getPart() > thread2.getPart()) {
                         return 1;
                     }
                     return -1;

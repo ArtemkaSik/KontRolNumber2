@@ -5,7 +5,7 @@ import java.io.*;
 public class PngProcessor extends Thread {
 
     private String filename;
-    public int part;
+    private int part;
     private byte[] data;
 
     public PngProcessor(String filename){
