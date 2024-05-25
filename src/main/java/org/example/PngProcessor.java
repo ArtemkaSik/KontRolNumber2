@@ -1,5 +1,7 @@
 package org.example;
 
+import org.junit.Test;
+
 import java.io.*;
 
 public class PngProcessor extends Thread {

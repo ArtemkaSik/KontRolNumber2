@@ -19,10 +19,12 @@ public class Main {
             String[] filenames = fileDir.list();
             ArrayList<PngProcessor> threads = new ArrayList<>();
 
-            for (String filename : filenames) {
-                PngProcessor thread = new PngProcessor("D:\\КФУ(Java)\\Programming\\KRnumber2\\src\\main\\cw2\\v21\\" + filename);
-                thread.run();
-                threads.add(thread);
+            if (filenames != null) {
+                for (String filename : filenames) {
+                    PngProcessor thread = new PngProcessor("D:\\КФУ(Java)\\Programming\\KRnumber2\\src\\main\\cw2\\v21\\" + filename);
+                    thread.start();
+                    threads.add(thread);
+                }
             }
             for (Thread thread:threads){
                 try{
